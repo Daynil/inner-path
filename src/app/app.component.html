@@ -1,21 +1,45 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary">
+
+  <span>Inner Path Counseling and Wellness</span>
+  <span class="spacer"></span>
+  <span class="nav-items">
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navAbout">About Us</button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navSpecialties">Specialties</button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navOther">Other Services</button>
+    <button class="nav-text" mat-button routerLink="forms">Forms</button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navBlogs">Blogs</button>
+    <button class="nav-text" mat-button routerLink="contact">Contact</button>
+  </span>
+
+</mat-toolbar>
+
+<mat-menu #navAbout="matMenu" [overlapTrigger]="false">
+  <button class="nav-text" mat-menu-item>Shelley Pier, LCSW</button>
+  <button class="nav-text" mat-menu-item>Eryn Smith-Moeller, LCPC</button>
+  <button class="nav-text" mat-menu-item>Asma Afridi, MeD, LCPC, PEL</button>
+  <button class="nav-text-small" mat-menu-item>Monique Prohaska-Slattery LCPC, ATR, CYT</button>
+</mat-menu>
+<mat-menu #navSpecialties="matMenu" [overlapTrigger]="false">
+  <button class="nav-text" mat-menu-item>Animal-Assisted Therapy</button>
+  <button class="nav-text" mat-menu-item>EMDR</button>
+  <button class="nav-text" mat-menu-item>Grief</button>
+  <button class="nav-text-small" mat-menu-item>Healing from Toxic Relationships</button>
+  <button class="nav-text" mat-menu-item>IFS/Parts Work</button>
+  <button class="nav-text" mat-menu-item>LGBTQIAP</button>
+  <button class="nav-text" mat-menu-item>Shame Work</button>
+  <button class="nav-text" mat-menu-item>Trauma/PTSD</button>
+  <button class="nav-text" mat-menu-item>Workshops</button>
+</mat-menu>
+<mat-menu #navOther="matMenu" [overlapTrigger]="false">
+  <button class="nav-text" mat-menu-item>Clinical Consultation</button>
+  <button class="nav-text" mat-menu-item>Expert Witness</button>
+  <button class="nav-text" mat-menu-item>Licensure Supervision</button>
+  <button class="nav-text-small" mat-menu-item>Therapist Practice Start-Up Consult</button>
+  <button class="nav-text" mat-menu-item>Training/Workshops</button>
+</mat-menu>
+<mat-menu #navBlogs="matMenu" [overlapTrigger]="false">
+  <button class="nav-text" mat-menu-item>Shelley's Blog</button>
+  <button class="nav-text" mat-menu-item>Eryn's Blog</button>
+</mat-menu>
 
 <router-outlet></router-outlet>

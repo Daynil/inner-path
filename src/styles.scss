@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './app-theme';
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.body-text {
+  font-weight: 300;
+  font-size: 20px;
+}
