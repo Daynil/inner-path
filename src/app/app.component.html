@@ -1,6 +1,12 @@
 <mat-toolbar color="primary">
 
-  <span>Inner Path Counseling and Wellness</span>
+  <button class="nav-brand" mat-button routerLink="">
+    <img src="../assets/innerpathlogos.svg" width="60px" alt="flower-logo">
+    <span class="logo-text">
+      <span class="logo-text-1">Inner Path</span>
+      <span class="logo-text-2">Counseling & Wellness</span>
+    </span>
+  </button>
   <span class="spacer"></span>
   <span class="nav-items">
     <button class="nav-text" mat-button [matMenuTriggerFor]="navAbout">About Us</button>

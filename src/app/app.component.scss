@@ -14,3 +14,22 @@
   font-weight: 400;
   font-size: 14px;
 }
+
+.logo-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 25px;
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.logo-text-1 {
+  font-family: 'Lora', sans-serif;
+  font-size: 25px;
+}
+
+.logo-text-2 {
+  font-family: 'Lora', sans-serif;
+  font-size: 15px;
+}
