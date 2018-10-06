@@ -1,3 +1,4 @@
+<!-- Navigation -->
 <mat-toolbar color="primary">
 
   <button class="nav-brand" mat-button routerLink="">
@@ -49,3 +50,63 @@
 </mat-menu>
 
 <router-outlet></router-outlet>
+
+<!-- Contact -->
+<div id="contact-section">
+
+        <h4 id="contact-text">Want to contact us?</h4>
+
+        <div id="address-form">
+          <div id="contact-info">
+            <div>Inner Path Counseling and Wellness</div>
+            <div class="divider"></div>
+            <div>825 N Cass Ave</div>
+            <div>Suite 115</div>
+            <div>Westmont, IL 60059</div>
+            <div class="divider"></div>
+            <div>P: 708-571-0082</div>
+            <div>E: innerpath.inquiries@gmail.com</div>
+          </div>
+
+          <form id="contact-form">
+
+            <div id="contact-name">
+              <mat-form-field class="input-name">
+                <input matInput #nameFirst required
+                  type="text" id="nameFirst"
+                  placeholder="First Name">
+              </mat-form-field>
+              <mat-form-field class="input-name">
+                <input matInput #nameLast required
+                  type="text" id="nameLast"
+                  placeholder="Last Name">
+              </mat-form-field>
+            </div>
+
+
+            <mat-form-field class="form-group">
+              <input matInput #email required
+                type="text" class="form-control" id="email"
+                placeholder="Email">
+            </mat-form-field>
+
+
+            <mat-form-field class="form-group">
+              <textarea matInput #comment required 
+                type="text" class="form-control" id="comment" rows="4"
+                placeholder="Comment"></textarea>
+            </mat-form-field>
+
+            <button mat-stroked-button
+              color="primary" id="contact-submit"
+              (click)="mail(nameFirst, nameLast, email, comment)">Submit</button>
+
+        </form>
+
+      </div>
+
+  <div id="copy">
+    <p>© Inner Path Counseling And Wellness, LLC {{ copydate }}. All rights reserved.</p>
+  </div>
+
+</div>

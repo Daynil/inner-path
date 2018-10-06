@@ -1,3 +1,5 @@
+@import '../app-theme';
+
 .nav-items {
   display: flex;
   justify-content: space-around;
@@ -32,4 +34,70 @@
 .logo-text-2 {
   font-family: 'Lora', sans-serif;
   font-size: 15px;
+}
+
+#contact-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: hsl(291, 9%, 16%);
+  color: hsl(0, 0%, 64%);
+  text-align: center;
+  font-weight: 400;
+  margin-top: 30px;
+
+  .divider {
+    width: 20%;
+  }
+
+  ::ng-deep .mat-form-field-label {
+    color: hsl(0, 0%, 64%) !important;
+  }
+
+  ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: hsl(174, 100%, 29%) !important;
+  }
+
+  ::ng-deep .mat-form-field-underline {
+    background-color: hsl(0, 0%, 64%) !important;
+  }
+}
+
+#contact-text {
+  font-size: 24px;
+  color: hsl(40, 20%, 97%);
+  font-weight: 400;
+}
+
+#address-form {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+
+#contact-info {
+  width: 450px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+}
+
+#contact-name {
+  display: flex;
+  justify-content: space-between;
+  .input-name {
+    width: 47%;
+  }
+}
+
+#contact-submit {
+  width: 108px;
+}
+
+#copy {
+  margin-top: 80px;
 }

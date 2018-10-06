@@ -9,4 +9,8 @@ $app-warn: mat-palette($mat-red);
 
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
+$primary: mat-color($app-primary);
+$accent: mat-color($app-accent);
+$warn: mat-color($app-warn);
+
 @include angular-material-theme($app-theme);

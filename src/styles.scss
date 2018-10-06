@@ -14,3 +14,12 @@
   font-weight: 300;
   font-size: 20px;
 }
+
+.divider {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 1px;
+  background-color: $primary;
+}
