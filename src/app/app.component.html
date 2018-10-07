@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" id="nav-bar">
 
   <button class="nav-brand" mat-button routerLink="">
     <img src="../assets/innerpathlogos.svg" width="60px" alt="flower-logo">
@@ -49,7 +49,9 @@
   <button class="nav-text" mat-menu-item>Eryn's Blog</button>
 </mat-menu>
 
-<router-outlet></router-outlet>
+<div id="route-container" [class.page-transition]="transitioning">
+  <router-outlet #o="outlet"></router-outlet>
+</div>
 
 <!-- Contact -->
 <div id="contact-section">

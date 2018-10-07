@@ -1,5 +1,10 @@
 @import '../app-theme';
 
+#nav-bar {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+
 .nav-items {
   display: flex;
   justify-content: space-around;
@@ -34,6 +39,11 @@
 .logo-text-2 {
   font-family: 'Lora', sans-serif;
   font-size: 15px;
+}
+
+#route-container {
+  // Set route height to guarentee footer anchor to bottom
+  min-height: calc(100vh - 64px - 530px);
 }
 
 #contact-section {
@@ -71,6 +81,7 @@
 
 #address-form {
   display: flex;
+  flex-wrap: wrap;
   width: 70%;
   margin: 0 auto;
   justify-content: space-around;
@@ -78,12 +89,14 @@
 
 #contact-info {
   width: 450px;
+  padding: 10px 0 10px 0;
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
   width: 550px;
+  padding: 10px 0 10px 0;
 }
 
 #contact-name {
@@ -100,4 +113,20 @@
 
 #copy {
   margin-top: 80px;
+}
+
+/**** Animations ****/
+
+.page-transition {
+  animation-duration: 0.6s;
+  animation-name: fadein;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
