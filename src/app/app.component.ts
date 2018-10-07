@@ -27,6 +27,12 @@ export class AppComponent implements OnInit {
     setTimeout(() => (this.transitioning = false), 600);
   }
 
+  blog(who: string) {
+    let url = 'https://spiercounseling.wordpress.com/';
+    if (who !== 'shelley') url = 'https://softanimalwisdom.wordpress.com/';
+    window.open(url);
+  }
+
   mail(
     nameFirst: HTMLInputElement,
     nameLast: HTMLInputElement,
