@@ -15,7 +15,8 @@ import {
   ClinicalConsultationComponent,
   ExpertWitnessComponent,
   LicensureSupervisionComponent,
-  TherapistConsultComponent
+  TherapistConsultComponent,
+  TrainingWorkshopsComponent
 } from './other-services';
 import {
   AnimalAssistedComponent,
@@ -51,7 +52,8 @@ const routes: Routes = [
   { path: 'clinical-consultation', component: ClinicalConsultationComponent },
   { path: 'expert-witness', component: ExpertWitnessComponent },
   { path: 'licensure-supervision', component: LicensureSupervisionComponent },
-  { path: 'therapist-consult', component: TherapistConsultComponent }
+  { path: 'therapist-consult', component: TherapistConsultComponent },
+  { path: 'training-workshops', component: TrainingWorkshopsComponent }
 ];
 
 @NgModule({

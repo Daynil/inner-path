@@ -1,5 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import './pure-gride.scss';
 @import './app-theme';
 
 .pure-g > div {
@@ -12,6 +11,14 @@
   padding: 1em;
 }
 
+.strip-pad {
+  padding: 0;
+}
+
+.strip-margin {
+  margin: 0;
+}
+
 .spacer {
   flex: 1 1 auto;
 }
@@ -20,10 +27,28 @@
   font-family: 'Work Sans', sans-serif;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.box-center {
+  margin: 0 auto;
+}
+
 .body-text {
   font-weight: 300;
   line-height: 30px;
   font-size: 20px;
+}
+
+.header-text {
+  font-weight: 400;
+  font-size: 56px;
+}
+
+.sub-header-text {
+  font-weight: 400;
+  font-size: 32px;
 }
 
 .divider {
@@ -46,6 +71,11 @@ a {
 
 img.rounded {
   border-radius: 20px;
+}
+
+.paw {
+  position: relative;
+  top: 2px;
 }
 
 .route-content {
