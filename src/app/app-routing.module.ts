@@ -19,15 +19,23 @@ import {
   TrainingWorkshopsComponent
 } from './other-services';
 import {
+  AdolescentsComponent,
   AnimalAssistedComponent,
+  ArtTherapyComponent,
+  CouplesTherapyComponent,
+  CulturalIdentityComponent,
   EmdrComponent,
   GriefComponent,
   IfsPartsWorkComponent,
   LgbtqiapComponent,
+  MoodDisordersComponent,
+  PreMaritalCounselingComponent,
+  ReikiComponent,
   ShameWorkComponent,
   ToxicRelationshipsComponent,
   TraumaPtsdComponent,
-  WorkshopsComponent
+  WorkshopsComponent,
+  YogaComponent
 } from './specialities';
 
 const routes: Routes = [
@@ -47,6 +55,14 @@ const routes: Routes = [
   { path: 'lgbtqiap', component: LgbtqiapComponent },
   { path: 'shame-work', component: ShameWorkComponent },
   { path: 'toxic-relationships', component: ToxicRelationshipsComponent },
+  { path: 'art-therapy', component: ArtTherapyComponent },
+  { path: 'yoga', component: YogaComponent },
+  { path: 'reiki', component: ReikiComponent },
+  { path: 'adolescents', component: AdolescentsComponent },
+  { path: 'cultural-identity', component: CulturalIdentityComponent },
+  { path: 'couples-therapy', component: CouplesTherapyComponent },
+  { path: 'pre-marital-counseling', component: PreMaritalCounselingComponent },
+  { path: 'mood-disorders', component: MoodDisordersComponent },
   { path: 'trauma-ptsd', component: TraumaPtsdComponent },
   { path: 'workshops', component: WorkshopsComponent },
   { path: 'clinical-consultation', component: ClinicalConsultationComponent },

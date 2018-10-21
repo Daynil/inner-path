@@ -27,6 +27,14 @@ import { ShameWorkComponent } from './specialities/shame-work/shame-work.compone
 import { ToxicRelationshipsComponent } from './specialities/toxic-relationships/toxic-relationships.component';
 import { TraumaPtsdComponent } from './specialities/trauma-ptsd/trauma-ptsd.component';
 import { WorkshopsComponent } from './specialities/workshops/workshops.component';
+import { ArtTherapyComponent } from './specialities/art-therapy/art-therapy.component';
+import { YogaComponent } from './specialities/yoga/yoga.component';
+import { ReikiComponent } from './specialities/reiki/reiki.component';
+import { AdolescentsComponent } from './specialities/adolescents/adolescents.component';
+import { CulturalIdentityComponent } from './specialities/cultural-identity/cultural-identity.component';
+import { CouplesTherapyComponent } from './specialities/couples-therapy/couples-therapy.component';
+import { PreMaritalCounselingComponent } from './specialities/pre-marital-counseling/pre-marital-counseling.component';
+import { MoodDisordersComponent } from './specialities/mood-disorders/mood-disorders.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +61,15 @@ import { WorkshopsComponent } from './specialities/workshops/workshops.component
     ExpertWitnessComponent,
     LicensureSupervisionComponent,
     TherapistConsultComponent,
-    TrainingWorkshopsComponent
+    TrainingWorkshopsComponent,
+    ArtTherapyComponent,
+    YogaComponent,
+    ReikiComponent,
+    AdolescentsComponent,
+    CulturalIdentityComponent,
+    CouplesTherapyComponent,
+    PreMaritalCounselingComponent,
+    MoodDisordersComponent
   ],
   imports: [
     BrowserModule,

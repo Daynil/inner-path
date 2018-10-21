@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-monique',
   templateUrl: './monique.component.html',
-  styles: []
+  styleUrls: ['./monique.component.scss']
 })
 export class MoniqueComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

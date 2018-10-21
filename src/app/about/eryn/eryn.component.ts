@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-eryn',
   templateUrl: './eryn.component.html',
-  styles: []
+  styleUrls: ['./eryn.component.scss']
 })
 export class ErynComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
