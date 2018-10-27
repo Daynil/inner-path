@@ -1,38 +1,8 @@
 @import './pure-gride.scss';
 @import './app-theme';
 
-.pure-g > div {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.pad {
-  padding: 1em;
-}
-
-.strip-pad {
-  padding: 0;
-}
-
-.strip-margin {
-  margin: 0;
-}
-
-.spacer {
-  flex: 1 1 auto;
-}
-
 * {
   font-family: 'Work Sans', sans-serif;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.box-center {
-  margin: 0 auto;
 }
 
 .body-text {
