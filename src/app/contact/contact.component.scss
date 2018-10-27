@@ -4,3 +4,24 @@
   width: 50vw;
   height: calc(40vw * 0.5);
 }
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  margin: 0 auto;
+  margin-top: -40px;
+}
+
+.contact-two {
+  display: flex;
+  justify-content: space-between;
+  .contact-two-item {
+    width: 47%;
+  }
+}
+
+#contact-submit {
+  width: 108px;
+}
