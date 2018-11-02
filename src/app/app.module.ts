@@ -18,23 +18,24 @@ import { ExpertWitnessComponent } from './other-services/expert-witness/expert-w
 import { LicensureSupervisionComponent } from './other-services/licensure-supervision/licensure-supervision.component';
 import { TherapistConsultComponent } from './other-services/therapist-consult/therapist-consult.component';
 import { TrainingWorkshopsComponent } from './other-services/training-workshops/training-workshops.component';
+import { SharedModule } from './shared/shared.module';
+import { AdolescentsComponent } from './specialities/adolescents/adolescents.component';
 import { AnimalAssistedComponent } from './specialities/animal-assisted/animal-assisted.component';
+import { ArtTherapyComponent } from './specialities/art-therapy/art-therapy.component';
+import { CouplesTherapyComponent } from './specialities/couples-therapy/couples-therapy.component';
+import { CulturalIdentityComponent } from './specialities/cultural-identity/cultural-identity.component';
 import { EmdrComponent } from './specialities/emdr/emdr.component';
 import { GriefComponent } from './specialities/grief/grief.component';
 import { IfsPartsWorkComponent } from './specialities/ifs-parts-work/ifs-parts-work.component';
 import { LgbtqiapComponent } from './specialities/lgbtqiap/lgbtqiap.component';
+import { MoodDisordersComponent } from './specialities/mood-disorders/mood-disorders.component';
+import { PreMaritalCounselingComponent } from './specialities/pre-marital-counseling/pre-marital-counseling.component';
+import { ReikiComponent } from './specialities/reiki/reiki.component';
 import { ShameWorkComponent } from './specialities/shame-work/shame-work.component';
 import { ToxicRelationshipsComponent } from './specialities/toxic-relationships/toxic-relationships.component';
 import { TraumaPtsdComponent } from './specialities/trauma-ptsd/trauma-ptsd.component';
 import { WorkshopsComponent } from './specialities/workshops/workshops.component';
-import { ArtTherapyComponent } from './specialities/art-therapy/art-therapy.component';
 import { YogaComponent } from './specialities/yoga/yoga.component';
-import { ReikiComponent } from './specialities/reiki/reiki.component';
-import { AdolescentsComponent } from './specialities/adolescents/adolescents.component';
-import { CulturalIdentityComponent } from './specialities/cultural-identity/cultural-identity.component';
-import { CouplesTherapyComponent } from './specialities/couples-therapy/couples-therapy.component';
-import { PreMaritalCounselingComponent } from './specialities/pre-marital-counseling/pre-marital-counseling.component';
-import { MoodDisordersComponent } from './specialities/mood-disorders/mood-disorders.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { MoodDisordersComponent } from './specialities/mood-disorders/mood-disor
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
