@@ -31,16 +31,18 @@
       </p>
     </div>
     <div class="pure-u-1 pure-u-lg-3-4 box-center pad">
-      <form id="contact-form">
+      <form #contactForm="ngForm" id="contact-form">
 
         <div class="contact-two">
           <mat-form-field class="contact-two-item">
-            <input matInput #nameFirst required
+            <input matInput required
+              [(ngModel)]="model.first" name="first"
               type="text" id="nameFirst"
               placeholder="First Name">
           </mat-form-field>
           <mat-form-field class="contact-two-item">
-            <input matInput #nameLast required
+            <input matInput required
+              [(ngModel)]="model.last" name="last"
               type="text" id="nameLast"
               placeholder="Last Name">
           </mat-form-field>
@@ -48,12 +50,14 @@
 
         <div class="contact-two">
           <mat-form-field class="contact-two-item">
-            <input matInput #email required
+            <input matInput required
+              [(ngModel)]="model.email" name="email"
               type="text" class="form-control" id="email"
               placeholder="Email">
           </mat-form-field>
           <mat-form-field class="contact-two-item">
-            <mat-select #subject required
+            <mat-select required
+              [(ngModel)]="model.subject" name="subject"
               type="text" class="form-control" id="subject"
               placeholder="Subject">
               <mat-option value="Question/Information">Question/Information</mat-option>
@@ -65,15 +69,15 @@
 
 
         <mat-form-field class="form-group">
-          <textarea matInput #comment required 
+          <textarea matInput required
+            [(ngModel)]="model.body" name="body"
             type="text" class="form-control" id="comment" rows="4"
             placeholder="Comment"></textarea>
         </mat-form-field>
 
         <button mat-raised-button
           color="primary" id="contact-submit"
-          (click)="mail(email, subject, nameFirst, nameLast, comment)">Submit</button>
-
+          (click)="mail()">Submit</button>
       </form>
     </div>
   </div>

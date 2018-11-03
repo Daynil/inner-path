@@ -78,16 +78,18 @@
             <div><mat-icon class="contact-icon">email</mat-icon> innerpath.inquiries@gmail.com</div>
           </div>
 
-          <form id="contact-form">
+          <form #footerContactForm="ngForm" id="contact-form">
 
             <div id="contact-name">
               <mat-form-field class="input-name">
-                <input matInput #nameFirst required
+                <input matInput required
+                  [(ngModel)]="model.first" name="first"
                   type="text" id="nameFirst"
                   placeholder="First Name">
               </mat-form-field>
               <mat-form-field class="input-name">
-                <input matInput #nameLast required
+                <input matInput required
+                  [(ngModel)]="model.last" name="last"
                   type="text" id="nameLast"
                   placeholder="Last Name">
               </mat-form-field>
@@ -95,21 +97,23 @@
 
 
             <mat-form-field class="form-group">
-              <input matInput #email required
+              <input matInput required
+                [(ngModel)]="model.email" name="email"
                 type="text" class="form-control" id="email"
                 placeholder="Email">
             </mat-form-field>
 
 
             <mat-form-field class="form-group">
-              <textarea matInput #comment required 
+              <textarea matInput required
+                [(ngModel)]="model.body" name="body"
                 type="text" class="form-control" id="comment" rows="4"
                 placeholder="Comment"></textarea>
             </mat-form-field>
 
             <button mat-stroked-button
               color="primary" id="contact-submit"
-              (click)="mail(nameFirst, nameLast, email, comment)">Submit</button>
+              (click)="mail()">Submit</button>
 
         </form>
 

@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { MailData } from './shared/mail-data.model';
+import { MailService } from './shared/mail.service';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +13,16 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   copydate: string;
-
+  model = new MailData();
   transitioning = false;
+  @ViewChild('footerContactForm')
+  footerContactForm: NgForm;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private mailService: MailService,
+    public snackBar: MatSnackBar
+  ) {}
 
   ngOnInit() {
     this.copydate = new Date().getFullYear() + '';
@@ -33,40 +43,29 @@ export class AppComponent implements OnInit {
     window.open(url);
   }
 
-  mail(
-    nameFirst: HTMLInputElement,
-    nameLast: HTMLInputElement,
-    email: HTMLInputElement,
-    body: HTMLTextAreaElement
-  ) {
-    const firstTxt = nameFirst.value;
-    const lastTxt = nameLast.value;
-    const emailTxt = email.value;
-    const subjectTxt = 'Footer contact';
-    const bodyTxt = body.value;
-    const vals = [firstTxt, lastTxt, emailTxt, bodyTxt];
-    let canSubmit = true;
-    // for (let i = 0; i < vals.length; i++) {
-    //   const curVal = vals[i];
-    //   if (curVal.length < 1) {
-    //     this.toast.error(`Please fill out all fields!`);
-    //     canSubmit = false;
-    //     break;
-    //   }
-    // }
-    // if (canSubmit) {
-    //   this.mailService
-    //       .sendEmail(firstTxt, lastTxt,
-    //                  emailTxt, subjectTxt, bodyTxt)
-    //       .then(res => {
-    //         if (res.message === 'sent') {
-    //           this.toast.success('Email sent!');
-    //           nameFirst.value = '';
-    //           nameLast.value = '';
-    //           email.value = '';
-    //           body.value = '';
-    //         }
-    //       });
-    // }
+  mail() {
+    if (!this.footerContactForm.valid) {
+      this.snackBar.open('Please fill out all fields.', 'Close', {
+        duration: 5000,
+        panelClass: 'snackbar-color'
+      });
+      return;
+    }
+    this.mailService.sendMail(this.model).subscribe(
+      res => {
+        this.snackBar.open('Email sent, thanks for contacting us!', 'Close', {
+          duration: 5000,
+          panelClass: 'snackbar-color'
+        });
+        this.model = new MailData();
+        this.footerContactForm.resetForm();
+      },
+      err => {
+        this.snackBar.open('Email error, please try again later.', 'Close', {
+          duration: 5000,
+          panelClass: 'snackbar-color'
+        });
+      }
+    );
   }
 }

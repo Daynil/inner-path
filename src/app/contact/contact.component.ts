@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { environment } from '../../environments/environment';
+import { MailData } from '../shared/mail-data.model';
 import { MailService } from '../shared/mail.service';
 
 @Component({
@@ -11,6 +13,9 @@ import { MailService } from '../shared/mail.service';
 })
 export class ContactComponent implements OnInit {
   mapsFrameUrl: SafeUrl;
+  model = new MailData();
+  @ViewChild('contactForm')
+  contactForm: NgForm;
 
   constructor(
     private sanitizer: DomSanitizer,
@@ -26,38 +31,29 @@ export class ContactComponent implements OnInit {
     );
   }
 
-  mail(
-    email: HTMLInputElement,
-    nameFirst: HTMLInputElement,
-    nameLast: HTMLInputElement,
-    subject: HTMLSelectElement,
-    body: HTMLTextAreaElement
-  ) {
-    const emailTxt = email.value;
-    const firstTxt = nameFirst.value;
-    const lastTxt = nameLast.value;
-    const subjectTxt = subject.value;
-    const bodyTxt = body.value;
-
-    this.mailService
-      .sendMail(emailTxt, firstTxt, lastTxt, bodyTxt, subjectTxt)
-      .subscribe(
-        res => {
-          this.snackBar.open('Email sent, thanks for contacting us!', 'Close', {
-            duration: 5000,
-            panelClass: 'snackbar-color'
-          });
-          email.value = '';
-          nameFirst.value = '';
-          nameLast.value = '';
-          subject.value = '';
-          body.value = '';
-        },
-        err =>
-          this.snackBar.open('Email error, please try again later.', 'Close', {
-            duration: 5000,
-            panelClass: 'snackbar-color'
-          })
-      );
+  mail() {
+    if (!this.contactForm.valid) {
+      this.snackBar.open('Please fill out all fields.', 'Close', {
+        duration: 5000,
+        panelClass: 'snackbar-color'
+      });
+      return;
+    }
+    this.mailService.sendMail(this.model).subscribe(
+      res => {
+        this.snackBar.open('Email sent, thanks for contacting us!', 'Close', {
+          duration: 5000,
+          panelClass: 'snackbar-color'
+        });
+        this.model = new MailData();
+        this.contactForm.resetForm();
+      },
+      err => {
+        this.snackBar.open('Email error, please try again later.', 'Close', {
+          duration: 5000,
+          panelClass: 'snackbar-color'
+        });
+      }
+    );
   }
 }
