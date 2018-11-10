@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutCardComponent } from './about/about-card.component';
 import { AsmaComponent } from './about/asma/asma.component';
 import { CassieComponent } from './about/cassie/cassie.component';
 import { ErynComponent } from './about/eryn/eryn.component';
@@ -36,7 +38,6 @@ import { ToxicRelationshipsComponent } from './specialities/toxic-relationships/
 import { TraumaPtsdComponent } from './specialities/trauma-ptsd/trauma-ptsd.component';
 import { WorkshopsComponent } from './specialities/workshops/workshops.component';
 import { YogaComponent } from './specialities/yoga/yoga.component';
-import { AboutCardComponent } from './about/about-card.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { AboutCardComponent } from './about/about-card.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
