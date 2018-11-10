@@ -36,6 +36,7 @@ import { ToxicRelationshipsComponent } from './specialities/toxic-relationships/
 import { TraumaPtsdComponent } from './specialities/trauma-ptsd/trauma-ptsd.component';
 import { WorkshopsComponent } from './specialities/workshops/workshops.component';
 import { YogaComponent } from './specialities/yoga/yoga.component';
+import { AboutCardComponent } from './about/about-card.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { YogaComponent } from './specialities/yoga/yoga.component';
     CulturalIdentityComponent,
     CouplesTherapyComponent,
     PreMaritalCounselingComponent,
-    MoodDisordersComponent
+    MoodDisordersComponent,
+    AboutCardComponent
   ],
   imports: [
     BrowserModule,

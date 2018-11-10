@@ -1,8 +1,7 @@
 <!-- Navigation -->
 <mat-toolbar color="primary" id="nav-bar">
-
   <button class="nav-brand" mat-button routerLink="">
-    <img src="../assets/innerpathlogos.svg" width="60px" alt="flower-logo">
+    <img src="../assets/innerpathlogos.svg" width="60px" alt="flower-logo" />
     <span class="logo-text">
       <span class="logo-text-1">Inner Path</span>
       <span class="logo-text-2">Counseling & Wellness</span>
@@ -10,51 +9,102 @@
   </button>
   <span class="spacer"></span>
   <span class="nav-items">
-    <button class="nav-text" mat-button [matMenuTriggerFor]="navAbout">About Us</button>
-    <button class="nav-text" mat-button [matMenuTriggerFor]="navSpecialties">Specialties</button>
-    <button class="nav-text" mat-button [matMenuTriggerFor]="navOther">Other Services</button>
+    <button class="nav-text" mat-button routerLink="us">About Us</button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navSpecialties">
+      Specialties
+    </button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navOther">
+      Other Services
+    </button>
     <button class="nav-text" mat-button routerLink="forms">Forms</button>
-    <button class="nav-text" mat-button [matMenuTriggerFor]="navBlogs">Blogs</button>
+    <button class="nav-text" mat-button [matMenuTriggerFor]="navBlogs">
+      Blogs
+    </button>
     <button class="nav-text" mat-button routerLink="contact">Contact</button>
   </span>
-
 </mat-toolbar>
 
 <mat-menu #navAbout="matMenu" [overlapTrigger]="false">
-  <button class="nav-text" mat-menu-item routerLink="shelley">Shelley Pier, LCSW</button>
-  <button class="nav-text" mat-menu-item routerLink="eryn">Eryn Smith-Moeller, LCPC</button>
-  <button class="nav-text" mat-menu-item routerLink="asma">Asma Afridi, MeD, LCPC, PEL</button>
-  <button class="nav-text-small" mat-menu-item routerLink="monique">Monique Prohaska-Slattery LCPC, ATR, CYT</button>
+  <button class="nav-text" mat-menu-item routerLink="shelley">
+    Shelley Pier, LCSW
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="eryn">
+    Eryn Smith-Moeller, LCPC
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="asma">
+    Asma Afridi, MeD, LCPC, PEL
+  </button>
+  <button class="nav-text-small" mat-menu-item routerLink="monique">
+    Monique Prohaska-Slattery LCPC, ATR, CYT
+  </button>
 </mat-menu>
 <mat-menu #navSpecialties="matMenu" [overlapTrigger]="false">
-  <button class="nav-text" mat-menu-item routerLink="adolescents">Adolescents</button>
-  <button class="nav-text" mat-menu-item routerLink="animal-assisted-therapy">Animal-Assisted Therapy</button>
-  <button class="nav-text" mat-menu-item routerLink="art-therapy">Art Therapy</button>
-  <button class="nav-text" mat-menu-item routerLink="couples-therapy">Couples Therapy</button>
-  <button class="nav-text" mat-menu-item routerLink="cultural-identity">Cultural Identity Issues</button>
+  <button class="nav-text" mat-menu-item routerLink="adolescents">
+    Adolescents
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="animal-assisted-therapy">
+    Animal-Assisted Therapy
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="art-therapy">
+    Art Therapy
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="couples-therapy">
+    Couples Therapy
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="cultural-identity">
+    Cultural Identity Issues
+  </button>
   <button class="nav-text" mat-menu-item routerLink="emdr">EMDR</button>
   <button class="nav-text" mat-menu-item routerLink="grief">Grief</button>
-  <button class="nav-text-small" mat-menu-item routerLink="toxic-relationships">Healing from Toxic Relationships</button>
-  <button class="nav-text" mat-menu-item routerLink="ifs-parts-work">IFS/Parts Work</button>
+  <button class="nav-text-small" mat-menu-item routerLink="toxic-relationships">
+    Healing from Toxic Relationships
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="ifs-parts-work">
+    IFS/Parts Work
+  </button>
   <button class="nav-text" mat-menu-item routerLink="lgbtqiap">LGBTQIAP</button>
-  <button class="nav-text" mat-menu-item routerLink="mood-disorders">Mood Disorders</button>
-  <button class="nav-text" mat-menu-item routerLink="pre-marital-counseling">Pre-marital Counseling</button>
+  <button class="nav-text" mat-menu-item routerLink="mood-disorders">
+    Mood Disorders
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="pre-marital-counseling">
+    Pre-marital Counseling
+  </button>
   <button class="nav-text" mat-menu-item routerLink="reiki">Reiki</button>
-  <button class="nav-text" mat-menu-item routerLink="shame-work">Shame Work</button>
-  <button class="nav-text" mat-menu-item routerLink="trauma-ptsd">Trauma/PTSD</button>
-  <button class="nav-text" mat-menu-item routerLink="workshops">Workshops/Groups</button>
+  <button class="nav-text" mat-menu-item routerLink="shame-work">
+    Shame Work
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="trauma-ptsd">
+    Trauma/PTSD
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="workshops">
+    Workshops/Groups
+  </button>
   <button class="nav-text" mat-menu-item routerLink="yoga">Yoga</button>
 </mat-menu>
 <mat-menu #navOther="matMenu" [overlapTrigger]="false">
-  <button class="nav-text" mat-menu-item routerLink="clinical-consultation">Clinical Consultation</button>
-  <button class="nav-text" mat-menu-item routerLink="expert-witness">Expert Witness</button>
-  <button class="nav-text" mat-menu-item routerLink="licensure-supervision">Licensure Supervision</button>
-  <button class="nav-text-small" mat-menu-item routerLink="therapist-consult">Therapist Practice Start-Up Consult</button>
-  <button class="nav-text" mat-menu-item routerLink="training-workshops">Training/Workshops</button>
+  <button class="nav-text" mat-menu-item routerLink="clinical-consultation">
+    Clinical Consultation
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="expert-witness">
+    Expert Witness
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="licensure-supervision">
+    Licensure Supervision
+  </button>
+  <button class="nav-text-small" mat-menu-item routerLink="therapist-consult">
+    Therapist Practice Start-Up Consult
+  </button>
+  <button class="nav-text" mat-menu-item routerLink="training-workshops">
+    Training/Workshops
+  </button>
 </mat-menu>
 <mat-menu #navBlogs="matMenu" [overlapTrigger]="false">
-  <button class="nav-text" mat-menu-item (click)="blog('shelley')">Shelley's Blog</button>
-  <button class="nav-text" mat-menu-item (click)="blog('eryn')">Eryn's Blog</button>
+  <button class="nav-text" mat-menu-item (click)="blog('shelley')">
+    Shelley's Blog
+  </button>
+  <button class="nav-text" mat-menu-item (click)="blog('eryn')">
+    Eryn's Blog
+  </button>
 </mat-menu>
 
 <div id="route-container" [class.page-transition]="transitioning">
@@ -63,64 +113,93 @@
 
 <!-- Contact -->
 <div id="contact-section">
+  <h4 id="contact-text">Want to contact us?</h4>
 
-        <h4 id="contact-text">Want to contact us?</h4>
+  <div id="address-form">
+    <div id="contact-info">
+      <div>Inner Path Counseling and Wellness</div>
+      <div class="divider"></div>
+      <div>825 N Cass Ave</div>
+      <div>Suite 115</div>
+      <div>Westmont, IL 60059</div>
+      <div class="divider"></div>
+      <div>
+        <mat-icon class="contact-icon">phone_iphone</mat-icon> (708) 571-0082
+      </div>
+      <div>
+        <mat-icon class="contact-icon">email</mat-icon>
+        innerpath.inquiries@gmail.com
+      </div>
+    </div>
 
-        <div id="address-form">
-          <div id="contact-info">
-            <div>Inner Path Counseling and Wellness</div>
-            <div class="divider"></div>
-            <div>825 N Cass Ave</div>
-            <div>Suite 115</div>
-            <div>Westmont, IL 60059</div>
-            <div class="divider"></div>
-            <div><mat-icon class="contact-icon">phone_iphone</mat-icon> (708) 571-0082</div>
-            <div><mat-icon class="contact-icon">email</mat-icon> innerpath.inquiries@gmail.com</div>
-          </div>
-
-          <form #footerContactForm="ngForm" id="contact-form">
-
-            <div id="contact-name">
-              <mat-form-field class="input-name">
-                <input matInput required
-                  [(ngModel)]="model.first" name="first"
-                  type="text" id="nameFirst"
-                  placeholder="First Name">
-              </mat-form-field>
-              <mat-form-field class="input-name">
-                <input matInput required
-                  [(ngModel)]="model.last" name="last"
-                  type="text" id="nameLast"
-                  placeholder="Last Name">
-              </mat-form-field>
-            </div>
-
-
-            <mat-form-field class="form-group">
-              <input matInput required
-                [(ngModel)]="model.email" name="email"
-                type="text" class="form-control" id="email"
-                placeholder="Email">
-            </mat-form-field>
-
-
-            <mat-form-field class="form-group">
-              <textarea matInput required
-                [(ngModel)]="model.body" name="body"
-                type="text" class="form-control" id="comment" rows="4"
-                placeholder="Comment"></textarea>
-            </mat-form-field>
-
-            <button mat-stroked-button
-              color="primary" id="contact-submit"
-              (click)="mail()">Submit</button>
-
-        </form>
-
+    <form #footerContactForm="ngForm" id="contact-form">
+      <div id="contact-name">
+        <mat-form-field class="input-name">
+          <input
+            matInput
+            required
+            [(ngModel)]="model.first"
+            name="first"
+            type="text"
+            id="nameFirst"
+            placeholder="First Name"
+          />
+        </mat-form-field>
+        <mat-form-field class="input-name">
+          <input
+            matInput
+            required
+            [(ngModel)]="model.last"
+            name="last"
+            type="text"
+            id="nameLast"
+            placeholder="Last Name"
+          />
+        </mat-form-field>
       </div>
 
-  <div id="copy">
-    <p>© Inner Path Counseling And Wellness, LLC {{ copydate }}. All rights reserved.</p>
+      <mat-form-field class="form-group">
+        <input
+          matInput
+          required
+          [(ngModel)]="model.email"
+          name="email"
+          type="text"
+          class="form-control"
+          id="email"
+          placeholder="Email"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="form-group">
+        <textarea
+          matInput
+          required
+          [(ngModel)]="model.body"
+          name="body"
+          type="text"
+          class="form-control"
+          id="comment"
+          rows="4"
+          placeholder="Comment"
+        ></textarea>
+      </mat-form-field>
+
+      <button
+        mat-stroked-button
+        color="primary"
+        id="contact-submit"
+        (click)="mail()"
+      >
+        Submit
+      </button>
+    </form>
   </div>
 
+  <div id="copy">
+    <p>
+      © Inner Path Counseling And Wellness, LLC {{ copydate }}. All rights
+      reserved.
+    </p>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { MatSnackBar } from '@angular/material';
+import { MatMenuTrigger, MatSnackBar } from '@angular/material';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { MailData } from './shared/mail-data.model';
@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   transitioning = false;
   @ViewChild('footerContactForm')
   footerContactForm: NgForm;
+  @ViewChild(MatMenuTrigger) aboutTriggerEl: MatMenuTrigger;
 
   constructor(
     private router: Router,
