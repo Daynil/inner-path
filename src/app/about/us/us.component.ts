@@ -14,11 +14,11 @@ export class UsComponent implements OnInit {
   ngOnInit() {
     this.people = [
       new Person(
-        'Asma',
-        'Afridi',
-        'MeD, LCPC, PEL',
-        'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1540148695/innerpath/Asma.jpg',
-        '../asma'
+        'Shelley',
+        'Pier',
+        'LCSW',
+        'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1474301780/home_mxdrbd.jpg',
+        '../shelley'
       ),
       new Person(
         'Eryn',
@@ -28,18 +28,18 @@ export class UsComponent implements OnInit {
         '../eryn'
       ),
       new Person(
+        'Asma',
+        'Afridi',
+        'MeD, LCPC, PEL',
+        'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1540148695/innerpath/Asma.jpg',
+        '../asma'
+      ),
+      new Person(
         'Monique',
         'Prohaska-Slattery',
         'LCPC, ATR, CYT',
         'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1540148413/innerpath/Monique_s_pic.jpg',
         '../monique'
-      ),
-      new Person(
-        'Shelley',
-        'Pier',
-        'LCSW',
-        'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1474301780/home_mxdrbd.jpg',
-        '../shelley'
       ),
       new Person(
         'Cassie',
