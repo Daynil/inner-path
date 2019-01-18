@@ -6,6 +6,7 @@ import {
   ErynComponent,
   MoniqueComponent,
   ShelleyComponent,
+  SueComponent,
   UsComponent
 } from './about';
 import { ContactComponent } from './contact/contact.component';
@@ -24,6 +25,7 @@ import {
   ArtTherapyComponent,
   CouplesTherapyComponent,
   CulturalIdentityComponent,
+  DbtComponent,
   EmdrComponent,
   GriefComponent,
   IfsPartsWorkComponent,
@@ -32,6 +34,7 @@ import {
   PreMaritalCounselingComponent,
   ReikiComponent,
   ShameWorkComponent,
+  SrrComponent,
   ToxicRelationshipsComponent,
   TraumaPtsdComponent,
   WorkshopsComponent,
@@ -47,6 +50,7 @@ const routes: Routes = [
   { path: 'eryn', component: ErynComponent },
   { path: 'monique', component: MoniqueComponent },
   { path: 'asma', component: AsmaComponent },
+  { path: 'sue', component: SueComponent },
   { path: 'cassie', component: CassieComponent },
   { path: 'animal-assisted-therapy', component: AnimalAssistedComponent },
   { path: 'emdr', component: EmdrComponent },
@@ -69,7 +73,9 @@ const routes: Routes = [
   { path: 'expert-witness', component: ExpertWitnessComponent },
   { path: 'licensure-supervision', component: LicensureSupervisionComponent },
   { path: 'therapist-consult', component: TherapistConsultComponent },
-  { path: 'training-workshops', component: TrainingWorkshopsComponent }
+  { path: 'training-workshops', component: TrainingWorkshopsComponent },
+  { path: 'srr', component: SrrComponent },
+  { path: 'dbt', component: DbtComponent }
 ];
 
 @NgModule({

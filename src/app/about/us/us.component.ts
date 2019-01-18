@@ -42,6 +42,13 @@ export class UsComponent implements OnInit {
         '../monique'
       ),
       new Person(
+        'Sue',
+        'Shekut',
+        'LCPC, LMT',
+        'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1547780304/innerpath/SueShekut_7-17_5845_sm.jpg',
+        '../sue'
+      ),
+      new Person(
         'Cassie',
         '',
         'Therapy Dog',

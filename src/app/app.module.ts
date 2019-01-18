@@ -38,6 +38,9 @@ import { ToxicRelationshipsComponent } from './specialities/toxic-relationships/
 import { TraumaPtsdComponent } from './specialities/trauma-ptsd/trauma-ptsd.component';
 import { WorkshopsComponent } from './specialities/workshops/workshops.component';
 import { YogaComponent } from './specialities/yoga/yoga.component';
+import { SueComponent } from './about/sue/sue.component';
+import { DbtComponent } from './specialities/dbt/dbt.component';
+import { SrrComponent } from './specialities/srr/srr.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +76,10 @@ import { YogaComponent } from './specialities/yoga/yoga.component';
     CouplesTherapyComponent,
     PreMaritalCounselingComponent,
     MoodDisordersComponent,
-    AboutCardComponent
+    AboutCardComponent,
+    SueComponent,
+    DbtComponent,
+    SrrComponent
   ],
   imports: [
     BrowserModule,
