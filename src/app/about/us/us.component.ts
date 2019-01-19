@@ -17,7 +17,7 @@ export class UsComponent implements OnInit {
         'Shelley',
         'Pier',
         'LCSW',
-        'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1474301780/home_mxdrbd.jpg',
+        'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1474301780/home_mxdrbd.jpg',
         '../shelley'
       ),
       new Person(
@@ -52,7 +52,7 @@ export class UsComponent implements OnInit {
         'Cassie',
         '',
         'Therapy Dog',
-        'http://res.cloudinary.com/dz9rf4hwz/image/upload/v1472417659/FB_IMG_1470266619808_whqzlc.jpg',
+        'https://res.cloudinary.com/dz9rf4hwz/image/upload/v1472417659/FB_IMG_1470266619808_whqzlc.jpg',
         '../cassie'
       )
     ];
