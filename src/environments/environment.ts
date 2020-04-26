@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  mapsApiKey: '',
-  apiBaseUrl: 'http://localhost:6789'
+  mapsApiKey: "",
+  apiBaseUrl: "http://localhost:5001/dlibin-api-ca89a/us-central1",
 };
 
 /*
